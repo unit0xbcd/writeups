@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>trash</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="/home/unit0xbcd/Documents/github-markdown.css" />
+</head>
+<body>
+<h1 id="trashcan">Trashcan</h1>
+<p>Trashcan is a forensics challenge from the Huntress CTF 2025. We are
+provided with an archive full of files from a Windows recycle bin.</p>
+<em>
+Have you ever done forensics on the Recycle Bin? It's... a bit of a mess. Looks like the threat actor pulled some tricks to hide data here though.
+
+<p>The metadata might not be what it should be. Can you find a flag?
+</em></p>
+<p><img src="trash001.png" /></p>
+<p>The files come as matching pairs - a metadata file prefixed with
+<code>$I</code> and the deleted file itself prefixed with
+<code>$R</code>. The deleted files are all the same - a plain text file
+with <strong>'When did I throw this out!?!?'</strong> as the
+contents.</p>
+<pre><code>$IZ3RIQE.txt
+$RZ3RIQE.txt
+cat \$RZ3RIQE.txt
+When did I throw this out!?!?
+</code></pre>
+<p><em>Pair of matching files + file content</em></p>
+<p>Looking at the <code>$I</code> file, it contains some kind of header
+information followed by the full path the matching <code>$R</code> file
+was deleted from.</p>
+<pre><code>
+unit0xbcd@potato:~/Downloads/trash$ xxd &#39;$IZ3RIQE.txt&#39;
+00000000: 0200 0000 0000 0000 3700 0000 0000 0000  ........7.......
+00000010: 0037 8725 5d08 2f00 1e00 0000 4300 3a00  .7.%]./.....C.:.
+00000020: 5c00 5500 7300 6500 7200 7300 5c00 6600  \.U.s.e.r.s.\.f.
+00000030: 6c00 6100 6700 5c00 4400 6500 7300 6b00  l.a.g.\.D.e.s.k.
+00000040: 7400 6f00 7000 5c00 6600 6c00 6100 6700  t.o.p.\.f.l.a.g.
+00000050: 2e00 7400 7800 7400 0000                 ..t.x.t...</code></pre>
+<p>As a next step I did some reading on the Windows recycle bin
+structure. By examining the stucture I determined that the challenge
+files followed the Windows 10 structure for byte layout according to
+this reference.</p>
+<h4 id="windows-10-recycle-bin-structure">Windows 10 recycle bin
+structure</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Offset</th>
+<th style="text-align: left;">Size</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">Header</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">File Size</td>
+</tr>
+<tr>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">Deleted Timestamp</td>
+</tr>
+<tr>
+<td style="text-align: left;">24</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">File Name Length</td>
+</tr>
+<tr>
+<td style="text-align: left;">28</td>
+<td style="text-align: left;">var</td>
+<td style="text-align: left;">File Name</td>
+</tr>
+</tbody>
+</table>
+<p>There was something odd about the second set of bytes, representing
+file size. Instead of a value that could represent the 30 byte size of
+the deleted text, there was a representation of a single ascii
+character. I had found a probable flag - but clearly out of order.</p>
+<pre><code>./$I1D6OCR.txt
+00000000: 0200 0000 0000 0000 6c00 0000 0000 0000  ........l.......
+./$I4VJ9VP.txt
+00000000: 0200 0000 0000 0000 3200 0000 0000 0000  ........2.......
+./$IQQAA2F.txt
+00000000: 0200 0000 0000 0000 6400 0000 0000 0000  ........d.......
+./$IMZ20SR.txt
+00000000: 0200 0000 0000 0000 6500 0000 0000 0000  ........e.......
+./$IFUV73N.txt
+00000000: 0200 0000 0000 0000 3600 0000 0000 0000  ........6.......
+./$I5RPN3M.txt
+00000000: 0200 0000 0000 0000 3300 0000 0000 0000  ........3.......
+./$ING16RB.txt
+00000000: 0200 0000 0000 0000 3200 0000 0000 0000  ........2.......
+./$ITB15DJ.txt
+00000000: 0200 0000 0000 0000 7d00 0000 0000 0000  ........}.......
+
+&lt;snip&gt;</code></pre>
+<p>I now needed to determine how to reorder them. I took the cleartext
+message from the deleted file as a hint. Instead of lexicographic or
+dictionary order, I used the deletion time recorded at 0x10, an offset
+of 16 bytes. This part required more research as I have never worked
+with Windows FILETIME in Python before.</p>
+<p>In computer operating systems, time is stored as a single whole
+number that represents the time elapsed since a chosen starting point
+known as the epoch. This allows for simple arithmetic operations for
+comparing, adding, and subtracting time as well as making
+representations of time fit easily into a 32 or 64 bit integer. In UNIX,
+time is represented as the number of seconds since the first of January
+1970. Windows it turns out, uses a count of each 100 nanoseconds since
+the first of January 1601. Because, of course it does?</p>
+<p>I built a python script to solve by reading in the header
+information, converting the Windows FILETIME to an int understandable by
+python's <code>datetime</code> module and building up a list of
+dictionaries with the flag character and the deletion time. Once the
+loop was complete, the list is then sorted by the deletion time.</p>
+<p>This resulted in quite a bit too much flag - removing the duplicates
+gave us exactly the right amount of flag.</p>
+<p><img src="trash003.png" /></p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> struct <span class="im">import</span> unpack</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sys <span class="im">import</span> argv</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> os <span class="im">import</span> listdir</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> re <span class="im">import</span> sub</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>library <span class="op">=</span> []</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># open all the files Iwant - just the metadata $I files</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>trashfiles <span class="op">=</span> [el <span class="cf">for</span> el <span class="kw">in</span> listdir(<span class="st">&#39;.&#39;</span>) <span class="cf">if</span> el.startswith(<span class="st">&#39;$I&#39;</span>)]</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> entry <span class="kw">in</span> trashfiles:</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(entry, <span class="st">&quot;rb&quot;</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># grab header whole - avoid repeated seeks</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        header <span class="op">=</span> <span class="bu">file</span>.read(<span class="dv">24</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co"># flag character position - first two bytes of file size field</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        char <span class="op">=</span> header[<span class="dv">8</span>:<span class="dv">10</span>].decode(<span class="st">&#39;utf-16le&#39;</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># deletion time</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>        bytetime <span class="op">=</span> header[<span class="dv">16</span>:<span class="dv">24</span>]</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>        inttime <span class="op">=</span> unpack(<span class="st">&#39;&lt;Q&#39;</span>, bytetime)[<span class="dv">0</span>]</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>        filetime <span class="op">=</span> datetime(<span class="dv">1601</span>,<span class="dv">1</span>,<span class="dv">1</span>)<span class="op">+</span>timedelta(seconds<span class="op">=</span>inttime<span class="op">/</span><span class="fl">1e7</span>)</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="co"># chuck into the library</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>        library.append({<span class="st">&#39;char&#39;</span>: char, <span class="st">&#39;filetime&#39;</span>: filetime})</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="co"># sort by our deletion time</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>library.sort(key<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="st">&#39;filetime&#39;</span>])</span></code></pre></div>
+<p>Converting the FILETIME to Python's datetime is not strictly
+necessary - I could have stopped at converting the bytes representation
+into a standard python integer and then sorted smallest to largest.
+Calculating the FILETIME was an iterative step I used to test my
+reasoning since the output is human readable.</p>
+<p>Thanks to <a
+href="https://medium.com/@thismanera/windows-recycle-bin-forensics-a2998c9a4d3e">thismanera</a>
+on Medium for a very concise and accurate explanation of the structure
+of recycle bin metadata files.</p>
+</body>
+</html>

@@ -1,0 +1,113 @@
+Volatility 3 Framework 2.26.0
+
+PID	PPID	ImageFileName	Offset(V)	Threads	Handles	SessionId	Wow64	CreateTime	ExitTime	Audit	Cmd	Path
+
+620	592	csrss.exe	0xdf07c4287080	13	-	0	False	2025-09-28 04:40:32.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\csrss.exe	-	-
+696	592	wininit.exe	0xdf07c4363080	6	-	0	False	2025-09-28 04:40:32.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\wininit.exe	-	-
+* 832	696	services.exe	0xdf07c43ee080	11	-	0	False	2025-09-28 04:40:32.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\services.exe	-	-
+** 2432	832	svchost.exe	0xdf07c4e460c0	18	-	0	False	2025-09-28 04:40:34.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 2304	832	svchost.exe	0xdf07c50d1080	7	-	0	False	2025-09-28 04:40:35.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 3200	832	vmtoolsd.exe	0xdf07c4dca0c0	15	-	0	False	2025-09-28 04:40:36.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files\VMware\VMware Tools\vmtoolsd.exe	"C:\Program Files\VMware\VMware Tools\vmtoolsd.exe"	C:\Program Files\VMware\VMware Tools\vmtoolsd.exe
+** 3076	832	svchost.exe	0xdf07c4dd1080	16	-	0	False	2025-09-28 04:40:36.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	C:\WINDOWS\System32\svchost.exe -k utcsvc -p	C:\WINDOWS\System32\svchost.exe
+*** 4288	3076	AggregatorHost	0xdf07c5673080	4	-	0	False	2025-09-28 04:40:38.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\AggregatorHost.exe	-	-
+** 4484	832	NisSrv.exe	0xdf07c6d090c0	9	-	0	False	2025-09-28 04:40:56.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files\Windows Defender\NisSrv.exe	-	-
+** 1528	832	svchost.exe	0xdf07c47ee200	71	-	0	False	2025-09-28 04:40:33.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+*** 5760	1528	taskhostw.exe	0xdf07c5aa1080	6	-	1	False	2025-09-28 04:41:39.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\taskhostw.exe	-	-
+*** 2152	1528	sihost.exe	0xdf07c4d7a240	17	-	1	False	2025-09-28 04:40:34.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\sihost.exe	sihost.exe	C:\WINDOWS\system32\sihost.exe
+**** 4640	2152	ShellHost.exe	0xdf07c4e73080	10	-	1	False	2025-09-28 04:40:40.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\ShellHost.exe	-	-
+**** 4804	2152	CrossDeviceRes	0xdf07c4637080	9	-	1	False	2025-09-28 04:40:40.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\CrossDeviceResume.exe	-	-
+*** 2616	1528	taskhostw.exe	0xdf07c4ec5080	8	-	1	False	2025-09-28 04:40:35.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\taskhostw.exe	-	-
+*** 2676	1528	MicrosoftEdgeU	0xdf07c4ee00c0	6	-	0	True	2025-09-28 04:40:35.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe	-	-
+*** 1816	1528	taskhostw.exe	0xdf07c073a080	7	-	0	False	2025-09-28 04:40:34.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\taskhostw.exe	-	-
+** 1800	832	svchost.exe	0xdf07c07a9080	6	-	0	False	2025-09-28 04:40:34.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 3212	832	vm3dservice.ex	0xdf07c4fbf080	5	-	0	False	2025-09-28 04:40:36.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\vm3dservice.exe	-	-
+*** 3516	3212	vm3dservice.ex	0xdf07c5387080	6	-	1	False	2025-09-28 04:40:36.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\vm3dservice.exe	-	-
+** 3728	832	dllhost.exe	0xdf07c535b080	21	-	0	False	2025-09-28 04:40:37.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\dllhost.exe	-	-
+** 7184	832	svchost.exe	0xdf07c68b9080	11	-	0	False	2025-09-28 04:40:58.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 2964	832	svchost.exe	0xdf07c3f91080	12	-	0	False	2025-09-28 04:40:35.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 5652	832	svchost.exe	0xdf07c5a0b080	9	-	1	False	2025-09-28 04:40:44.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 2456	832	svchost.exe	0xdf07c55d4080	33	-	0	False	2025-09-28 04:40:38.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 7832	832	WmiApSrv.exe	0xdf07c6c76080	7	-	0	False	2025-09-28 04:41:04.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\wbem\WmiApSrv.exe	-	-
+** 1948	832	svchost.exe	0xdf07c06ac080	12	-	0	False	2025-09-28 04:40:34.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 1052	832	svchost.exe	0xdf07c4cab080	22	-	0	False	2025-09-28 04:40:34.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 3228	832	MsMpEng.exe	0xdf07c51ee080	36	-	0	False	2025-09-28 04:40:36.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files\Windows Defender\MsMpEng.exe	"C:\Program Files\Windows Defender\MsMpEng.exe"	C:\Program Files\Windows Defender\MsMpEng.exe
+** 1184	832	svchost.exe	0xdf07c498f200	7	-	0	False	2025-09-28 04:40:33.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 1312	832	svchost.exe	0xdf07c49ee080	14	-	0	False	2025-09-28 04:40:33.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 1696	832	svchost.exe	0xdf07c4a4e080	38	-	0	False	2025-09-28 04:40:33.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 6816	832	SearchIndexer.	0xdf07c5850080	15	-	0	False	2025-09-28 04:41:26.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\SearchIndexer.exe	-	-
+*** 3024	6816	SearchFilterHo	0xdf07c4e15080	6	-	0	False	2025-09-28 04:41:36.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\SearchFilterHost.exe	-	-
+*** 3956	6816	SearchProtocol	0xdf07c4e39080	9	-	0	False	2025-09-28 04:41:35.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\SearchProtocolHost.exe	-	-
+** 2596	832	svchost.exe	0xdf07c4ec3240	17	-	0	False	2025-09-28 04:40:35.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	C:\WINDOWS\system32\svchost.exe -k appmodel -p	C:\WINDOWS\system32\svchost.exe
+** 1192	832	svchost.exe	0xdf07c498e080	12	-	0	False	2025-09-28 04:40:33.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	C:\WINDOWS\system32\svchost.exe -k NetworkService -p	C:\WINDOWS\system32\svchost.exe
+** 2088	832	svchost.exe	0xdf07c4be6080	12	-	0	False	2025-09-28 04:40:34.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+*** 2640	2088	audiodg.exe	0xdf07c4eb8080	8	-	0	False	2025-09-28 04:40:35.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\audiodg.exe	-	-
+** 4520	832	svchost.exe	0xdf07c58460c0	14	-	0	False	2025-09-28 04:40:39.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 1324	832	svchost.exe	0xdf07c49f5080	27	-	0	False	2025-09-28 04:40:33.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe		
+** 1584	832	svchost.exe	0xdf07c4a11240	7	-	0	False	2025-09-28 04:40:33.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 3376	832	svchost.exe	0xdf07c5286080	5	-	0	False	2025-09-28 04:40:36.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 1204	832	svchost.exe	0xdf07c48860c0	18	-	0	False	2025-09-28 04:40:33.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 2228	832	svchost.exe	0xdf07c3fa9080	16	-	1	False	2025-09-28 04:40:34.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 1212	832	svchost.exe	0xdf07c46490c0	20	-	0	False	2025-09-28 04:40:33.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 2748	832	svchost.exe	0xdf07c4fb0080	24	-	0	False	2025-09-28 04:40:35.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 2876	832	spoolsv.exe	0xdf07c4ff50c0	12	-	0	False	2025-09-28 04:40:35.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\spoolsv.exe	-	-
+** 5052	832	VSSVC.exe	0xdf07c5ea80c0	5	-	0	False	2025-09-28 04:40:41.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\VSSVC.exe	-	-
+** 1984	832	svchost.exe	0xdf07c4bf0240	8	-	0	False	2025-09-28 04:40:34.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 2376	832	svchost.exe	0xdf07c4fa7080	8	-	0	False	2025-09-28 04:40:38.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 976	832	svchost.exe	0xdf07c469f240	40	-	0	False	2025-09-28 04:40:32.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	C:\WINDOWS\system32\svchost.exe -k DcomLaunch -p	C:\WINDOWS\system32\svchost.exe
+*** 5408	976	StartMenuExper	0xdf07c5c5c080	36	-	1	False	2025-09-28 04:40:43.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe	-	-
+*** 5664	976	RuntimeBroker.	0xdf07c5a08080	12	-	1	False	2025-09-28 04:40:44.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\RuntimeBroker.exe	-	-
+*** 4864	976	WmiPrvSE.exe	0xdf07c6bf9080	14	-	0	False	2025-09-28 04:40:57.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\wbem\WmiPrvSE.exe	-	-
+*** 5572	976	RuntimeBroker.	0xdf07c5cbe080	18	-	1	False	2025-09-28 04:40:43.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\RuntimeBroker.exe	-	-
+*** 4004	976	WmiPrvSE.exe	0xdf07c54c2080	12	-	0	False	2025-09-28 04:40:37.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\wbem\WmiPrvSE.exe	-	-
+*** 3556	976	RuntimeBroker.	0xdf07c6bf50c0	6	-	1	False	2025-09-28 04:40:58.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\RuntimeBroker.exe	-	-
+*** 7464	976	smartscreen.ex	0xdf07c4636080	10	-	1	False	2025-09-28 04:41:01.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\smartscreen.exe	-	-
+*** 4844	976	RuntimeBroker.	0xdf07c6c2b080	6	-	1	False	2025-09-28 04:40:58.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\RuntimeBroker.exe	-	-
+*** 3896	976	RuntimeBroker.	0xdf07c520d080	9	-	1	False	2025-09-28 04:41:30.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\RuntimeBroker.exe	-	-
+*** 5428	976	SearchHost.exe	0xdf07c5c5b080	36	-	1	False	2025-09-28 04:40:43.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe	"C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe" -ServerName:CortanaUI.AppXstmwaab17q5s3y22tp6apqz7a45vwv65.mca	C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe
+**** 6036	5428	msedgewebview2	0xdf07c5eb7080	53	-	1	False	2025-09-28 04:40:45.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.94\msedgewebview2.exe	"C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.94\msedgewebview2.exe" --embedded-browser-webview=1 --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --user-data-dir="C:\Users\User\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView" --noerrdialogs --disable-features=msSmartScreenProtection --edge-webview-enable-mojo-ipcz --enable-features=msEdgeFluentOverlayScrollbar --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26100.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26100 IsWebView2/True (WebView2Version 140.0.3485.94)" --lang=en-US --mojo-named-platform-channel-pipe=5428.5968.3769297163769707928 /pfhostedapp:ac4e660df40bc14709926fc65263f3df853a2ab7	C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.94\msedgewebview2.exe
+***** 6656	6036	msedgewebview2	0xdf07c64d4080	20	-	1	False	2025-09-28 04:40:48.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.94\msedgewebview2.exe	-	-
+***** 6564	6036	msedgewebview2	0xdf07c6a19080	21	-	1	False	2025-09-28 04:40:47.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.94\msedgewebview2.exe	-	-
+***** 5284	6036	msedgewebview2	0xdf07c6516080	10	-	1	False	2025-09-28 04:40:46.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.94\msedgewebview2.exe	-	-
+***** 6844	6036	msedgewebview2	0xdf07c64ed080	20	-	1	False	2025-09-28 04:40:48.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.94\msedgewebview2.exe	-	-
+***** 6684	6036	msedgewebview2	0xdf07c64f5080	11	-	1	False	2025-09-28 04:40:48.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.94\msedgewebview2.exe	-	-
+*** 6708	976	RuntimeBroker.	0xdf07c695e080	8	-	1	False	2025-09-28 04:41:37.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\RuntimeBroker.exe	-	-
+*** 5752	976	Widgets.exe	0xdf07c5af8080	11	-	1	False	2025-09-28 04:40:44.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files\WindowsApps\MicrosoftWindows.Client.WebExperience_424.1301.270.9_x64__cw5n1h2txyewy\Dashboard\Widgets.exe	-	-
+** 2388	832	svchost.exe	0xdf07c4e3d080	8	-	1	False	2025-09-28 04:40:34.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 3924	832	dllhost.exe	0xdf07c54ce080	18	-	0	False	2025-09-28 04:40:37.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\dllhost.exe	-	-
+** 1368	832	svchost.exe	0xdf07c4711240	24	-	0	False	2025-09-28 04:40:33.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+*** 2468	1368	ctfmon.exe	0xdf07c4e83080	12	-	1	False	2025-09-28 04:40:37.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\ctfmon.exe	-	-
+** 2272	832	svchost.exe	0xdf07c4e020c0	8	-	0	False	2025-09-28 04:40:34.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 868	832	svchost.exe	0xdf07c6017080	16	-	1	False	2025-09-28 04:40:42.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+** 7524	832	SecurityHealth	0xdf07c55e8080	15	-	0	False	2025-09-28 04:41:01.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\SecurityHealthService.exe	C:\WINDOWS\system32\SecurityHealthService.exe	C:\WINDOWS\system32\SecurityHealthService.exe
+** 3176	832	VGAuthService.	0xdf07c51f3080	5	-	0	False	2025-09-28 04:40:36.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files\VMware\VMware Tools\VMware VGAuth\VGAuthService.exe	-	-
+** 624	832	svchost.exe	0xdf07c488e080	24	-	0	False	2025-09-28 04:40:33.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	C:\WINDOWS\system32\svchost.exe -k RPCSS -p	C:\WINDOWS\system32\svchost.exe
+** 2548	832	msdtc.exe	0xdf07c55900c0	12	-	0	False	2025-09-28 04:40:37.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\msdtc.exe	-	-
+** 1400	832	svchost.exe	0xdf07c4723080	6	-	0	False	2025-09-28 04:40:33.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\svchost.exe	-	-
+* 992	696	fontdrvhost.ex	0xdf07c46a8140	7	-	0	False	2025-09-28 04:40:32.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\fontdrvhost.exe	-	-
+* 860	696	lsass.exe	0xdf07c4638080	13	-	0	False	2025-09-28 04:40:32.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\lsass.exe	C:\WINDOWS\system32\lsass.exe	C:\WINDOWS\system32\lsass.exe
+716	688	csrss.exe	0xdf07c459e080	15	-	1	False	2025-09-28 04:40:32.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\csrss.exe	%SystemRoot%\system32\csrss.exe ObjectDirectory=\Windows SharedSection=1024,20480,768 Windows=On SubSystemType=Windows ServerDll=basesrv,1 ServerDll=winsrv:UserServerDllInitialization,3 ServerDll=sxssrv,4 ProfileControl=Off MaxRequestThreads=16	C:\WINDOWS\system32\csrss.exe
+796	688	winlogon.exe	0xdf07c43c8080	7	-	1	False	2025-09-28 04:40:32.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\winlogon.exe	winlogon.exe	C:\WINDOWS\system32\winlogon.exe
+* 984	796	fontdrvhost.ex	0xdf07c46a6080	7	-	1	False	2025-09-28 04:40:32.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\fontdrvhost.exe	-	-
+* 4340	796	userinit.exe	0xdf07c574b080	0	-	1	False	2025-09-28 04:40:39.000000 UTC	2025-09-28 04:41:05.000000 UTC	\Device\HarddiskVolume3\Windows\System32\userinit.exe	-	-
+** 4396	4340	explorer.exe	0xdf07c5807080	87	-	1	False	2025-09-28 04:40:39.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\explorer.exe	C:\WINDOWS\Explorer.EXE	C:\WINDOWS\Explorer.EXE
+*** 8064	4396	vmtoolsd.exe	0xdf07c54d3080	14	-	1	False	2025-09-28 04:41:07.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files\VMware\VMware Tools\vmtoolsd.exe	-	-
+*** 4036	4396	WindowsTermina	0xdf07c4cd40c0	23	-	1	False	2025-09-28 04:41:34.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.18.10301.0_x64__8wekyb3d8bbwe\WindowsTerminal.exe	"C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.18.10301.0_x64__8wekyb3d8bbwe\WindowsTerminal.exe" 	C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.18.10301.0_x64__8wekyb3d8bbwe\WindowsTerminal.exe
+**** 6024	4036	OpenConsole.ex	0xdf07c5d83080	6	-	1	False	2025-09-28 04:41:37.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.18.10301.0_x64__8wekyb3d8bbwe\OpenConsole.exe	-	-
+**** 5920	4036	powershell.exe	0xdf07c73d5080	20	-	1	False	2025-09-28 04:41:37.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\WindowsPowerShell\v1.0\powershell.exe	C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe	C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+***** 7152	5920	memdump.exe	0xdf07c55230c0	3	-	1	False	2025-09-28 04:42:01.000000 UTC	N/A	\Device\HarddiskVolume3\Users\User\Desktop\memdump.exe	-	-
+***** 1388	5920	Notepad.exe	0xdf07c45b70c0	6	-	1	False	2025-09-28 04:41:51.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files\WindowsApps\Microsoft.WindowsNotepad_11.2312.18.0_x64__8wekyb3d8bbwe\Notepad\Notepad.exe	-	-
+****** 1628	1388	Notepad.exe	0xdf07c50d2080	17	-	1	False	2025-09-28 04:41:51.000000 UTC	N/A	\Device\HarddiskVolume3\Program Files\WindowsApps\Microsoft.WindowsNotepad_11.2312.18.0_x64__8wekyb3d8bbwe\Notepad\Notepad.exe	-	-
+***** 2132	5920	BackupHelper.e	0xdf07c4733080	6	-	1	False	2025-09-28 04:41:51.000000 UTC	N/A	\Device\HarddiskVolume3\Users\User\Desktop\BackupHelper.exe	-	-
+****** 2332	2132	conhost.exe	0xdf07c6539080	4	-	1	False	2025-09-28 04:41:52.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\conhost.exe	-	-
+*** 3588	4396	OneDrive.exe	0xdf07c73de080	32	-	1	False	2025-09-28 04:41:13.000000 UTC	N/A	\Device\HarddiskVolume3\Users\User\AppData\Local\Microsoft\OneDrive\OneDrive.exe	-	-
+**** 5852	3588	Microsoft.Shar	0xdf07c49a0080	0	-	1	False	2025-09-28 04:41:16.000000 UTC	2025-09-28 04:41:30.000000 UTC	\Device\HarddiskVolume3\Users\User\AppData\Local\Microsoft\OneDrive\25.087.0506.0001\Microsoft.SharePoint.exe	-	-
+*** 8176	4396	msedge.exe	0xdf07c4822080	0	-	1	False	2025-09-28 04:41:10.000000 UTC	2025-09-28 04:41:12.000000 UTC	\Device\HarddiskVolume3\Program Files (x86)\Microsoft\Edge\Application\msedge.exe	-	-
+*** 7508	4396	SecurityHealth	0xdf07c6b8c080	4	-	1	False	2025-09-28 04:41:01.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\SecurityHealthSystray.exe	-	-
+* 1076	796	dwm.exe	0xdf07c493b080	22	-	1	False	2025-09-28 04:40:33.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\dwm.exe	"dwm.exe"	C:\WINDOWS\system32\dwm.exe
+14024712	25769803776	(������(�����	0xdf07c4977ff0	3674819088	-	N/A	True	1600-11-20 01:02:29.000000 UTC	N/A	-	-	-
+0	272693573022080		0xdf07c49780b8	0	-	-	True	N/A	N/A	-	-	-
+* 245224456028616	0		0xdf07c49780c0	0	-	3298263976	True	N/A	N/A	-	-	-
+* 4	0	System	0xdf07c0690040	176	-	N/A	False	2025-09-28 04:40:31.000000 UTC	N/A	-	-	-
+** 96	4	Registry	0xdf07c0875080	4	-	N/A	False	2025-09-28 04:40:26.000000 UTC	N/A	Registry	-	-
+** 1996	4	MemCompression	0xdf07c0718040	38	-	N/A	False	2025-09-28 04:40:34.000000 UTC	N/A	MemCompression	-	-
+** 448	4	smss.exe	0xdf07c3c42040	3	-	N/A	False	2025-09-28 04:40:31.000000 UTC	N/A	\Device\HarddiskVolume3\Windows\System32\smss.exe	-	-
