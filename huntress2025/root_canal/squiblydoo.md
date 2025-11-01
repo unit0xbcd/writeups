@@ -117,7 +117,7 @@ hacked_getdents64
             
 Here we can also see the string **squiblydoo** defined as our hiding prefix.
 
-With the correct signals the rest of the challenge was straightforward. It was not necessarily to remove the diamorphine kernel module - since the hidden directory was only masked from being listed, accessing the flag directory would work as long as the user had the correct permissions.
+With the correct signals the rest of the challenge was straightforward. It was not necessarily to remove the diamorphine kernel module - since the hidden directory was only masked from being listed, accessing the flag directly would work as long as the user had the correct permissions.
 
 ```
 ctf@ip-10-1-142-194:~$ kill -12 1
