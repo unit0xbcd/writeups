@@ -29,6 +29,9 @@ I decided to isolate the other registers and see if they made more sense. Regist
 
 ```
 tshark -r bussing_around.pcapng -Y "modbus.func_code == 6 && modbus.regnum16 == 0 && ip.src == 172.20.10.2" -T fields -e modbus.regval_uint16
+
+
+1 0 1 1 0 0 0 0 0 1 1 1 0 0 0 0 1 0 0 0 1 0 1 0 1 1 1 1 0 1 0 1 0 1 0 0 0 1 1 0 1 0 0 0 1 0 1 1 0 1 0 1 0 0 1 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 1 0 1 0 1 0 1 1 0 0 0 1 1 1 0 1 0 0 1 0 1 1 0 1 1 1 0 1 0 1 1 1 1 0 1 0 1 0 1 0 0 0 1 1 0 1 0 0 0 1 0 1 1 0 1 0 1 0 0 1 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 <snip>
 ```
 
 I loaded it into CyberChef and saw the headers for a standard PK zip file as well as some plaintext around it that showed a zip file password. 
